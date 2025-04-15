@@ -15,7 +15,7 @@ ExpressJS + Typescript backend that translates veterinarian reports into multipl
     npm run dev
 ```
 
-## Setup LibreTranslate locally for testing purpose
+## Setup LibreTranslate locally for testing purpose `http://localhost:5001`
 
 ```bash
     git clone https://github.com/LibreTranslate/LibreTranslate.git
@@ -49,3 +49,18 @@ POST `http://localhost:5000/api/translate`
     "targetLang": "es"
 }
 ```
+
+## Bonus Features Implemented
+
+- Error handling for unsupported languages [used express-validator - DONE]
+- Detect and fallback to system language via Accept-Language header [Handled using Middleware - DONE]
+- Cost-reduction via in-memory caching [in-memory: Map-based for now - DONE]
+- User preference storage
+- Unit and integration tests [Jest + Supertest - DONE]
+
+## Tech Stack
+
+- Node.js + Express
+- TypeScript
+- Jest + Supertest
+- LibreTranslate (via Docker)
