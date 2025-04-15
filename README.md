@@ -50,12 +50,35 @@ POST `http://localhost:5000/api/translate`
 }
 ```
 
+- To use user-based preference
+
+```bash
+{
+    "text": [
+        "Hello, how are you?",
+        "your test results are available",
+        "please contact your veterinarian",
+        "january - month"
+    ],
+    "userId":123
+}
+```
+
+- To handle user preference
+  POST `http://localhost:5000/api/users/:userId/preferences`
+
+```bash
+    {
+    "language": "fr"
+    }
+```
+
 ## Bonus Features Implemented
 
 - Error handling for unsupported languages [used express-validator - DONE]
 - Detect and fallback to system language via Accept-Language header [Handled using Middleware - DONE]
 - Cost-reduction via in-memory caching [in-memory: Map-based for now - DONE]
-- User preference storage
+- User preference storage [In-memory for now using Map - DONE]
 - Unit and integration tests [Jest + Supertest - DONE]
 
 ## Tech Stack
