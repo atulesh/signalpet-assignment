@@ -19,7 +19,7 @@ export const translateUsingLibre = async (text: string[], targetLang: string): P
 
             const res  = await axios.post(env.TRANSLATE_API_URL, {
                 q: item,
-                source: SupportedLanguage.English,
+                source: "auto", // auto detect source language
                 target: targetLang,
                 format: "text",
             });
