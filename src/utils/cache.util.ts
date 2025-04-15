@@ -1,4 +1,8 @@
-
+/**
+ * Translation cache - use in-memory (Map) to cache each translate text
+ * TODO: use redis for better performance for production - large datasets
+ *  
+ */
 const translationCache = new Map<string, string>();
 
 export const getCachedTranslation = (key: string): string | undefined => {

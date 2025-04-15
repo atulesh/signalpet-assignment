@@ -1,8 +1,8 @@
-## SignalPet Assignment
+# SignalPet Assignment
 
 ExpressJS + Typescript backend that translates veterinarian reports into multiple languages using [LibreTranslate](https://libretranslate.com)
 
-### Features
+## Features
 
 - Translate labeled strings in bulk using LibreTranslate
 - Supports `en`, `es`, `fr`, `de`, `pt`
@@ -15,7 +15,7 @@ ExpressJS + Typescript backend that translates veterinarian reports into multipl
     npm run dev
 ```
 
-### Setup LibreTranslate locally for testing purpose
+## Setup LibreTranslate locally for testing purpose
 
 ```bash
     git clone https://github.com/LibreTranslate/LibreTranslate.git
@@ -24,11 +24,21 @@ ExpressJS + Typescript backend that translates veterinarian reports into multipl
     ./run.sh --load-only en,es,fr,de,pt --port 5001
 ```
 
-### Setup `.env` file using `.env.sample`
+## Setup `.env` file using `.env.sample`
 
-### to test the translate feature
+## to test the translate feature
 
-POST `/api/translate`
+### 1. use of jest and supertest
+
+- for unit and integration testing
+
+```bash
+    npm run test
+```
+
+### 2. using postman
+
+POST `http://localhost:5000/api/translate`
 
 ```bash
 {
