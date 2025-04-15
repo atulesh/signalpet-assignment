@@ -1,11 +1,13 @@
+import { translateUsingLibre } from '@/services/translate.service';
 import { Request, Response } from 'express';
 
 export const translateText = async (req: Request, res: Response) => {
     const { text, targetLang } = req.body;
-    // TODO: Implement actual logic
+
+    const translatedText = await translateUsingLibre(text, targetLang);
     res.status(200).json({
         success: true,
-        data: { text, targetLang },
+        data: { translatedText, targetLang },
         message: 'Text translated successfully',
     });
 };

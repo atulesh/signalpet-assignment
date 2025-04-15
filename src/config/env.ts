@@ -13,4 +13,5 @@ const required = (key: string) => {
 export const env = {
     PORT: process.env.PORT || 5000,
     CORS_ORIGIN: required('CORS_ORIGIN'),
+    TRANSLATE_API_URL: required('TRANSLATE_API_URL'),
 };
